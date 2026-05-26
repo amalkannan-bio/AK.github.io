@@ -27,6 +27,27 @@
       --blue-lo:   rgba(126,184,212,0.08);
       --green:     #7db89a;
       --green-lo:  rgba(125,184,154,0.08);
+      --hero-img-opacity: 0.04;
+    }
+
+    /* ── Light mode ── */
+    [data-theme="light"] {
+      --bg:        #f7f5f1;
+      --surface:   #ffffff;
+      --surface2:  #f0ede8;
+      --border:    #e4dfd7;
+      --border2:   #d4cec5;
+      --text:      #18150f;
+      --muted:     #a09890;
+      --sub:       #6e6660;
+      --accent:    #a8722a;
+      --accent-lo: rgba(168,114,42,0.07);
+      --accent-md: rgba(168,114,42,0.18);
+      --blue:      #2e7fa8;
+      --blue-lo:   rgba(46,127,168,0.08);
+      --green:     #2e7a58;
+      --green-lo:  rgba(46,122,88,0.08);
+      --hero-img-opacity: 0.06;
     }
 
     html { scroll-behavior: smooth; }
@@ -71,6 +92,24 @@
     .nav-cta:hover { background: var(--accent-lo); }
     .hamburger { display: none; background: none; border: none; color: var(--muted); font-size: 1.2rem; cursor: pointer; }
 
+    /* ── Theme toggle ── */
+    .theme-toggle {
+      background: none; border: 1px solid var(--border2);
+      color: var(--muted); cursor: pointer;
+      width: 34px; height: 34px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+    .theme-toggle .icon-moon { display: block; }
+    .theme-toggle .icon-sun  { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+    [data-theme="light"] .theme-toggle .icon-sun  { display: block; }
+
+    /* Smooth theme transition */
+    *, *::before, *::after { transition: background-color 0.25s ease, border-color 0.25s ease, color 0.15s ease; }
+
     /* ─── HERO ─── */
     #hero {
       min-height: 100vh;
@@ -92,7 +131,7 @@
       background-image: url('https://images.unsplash.com/photo-1530026405186-ed1f139313f3?w=1600&q=60&fit=crop');
       background-size: cover;
       background-position: center;
-      opacity: 0.04;
+      opacity: var(--hero-img-opacity);
       z-index: 0;
     }
 
@@ -506,8 +545,16 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nav-cta" href="mailto:amal.kannan.sadagopan@gmail.com">Get in touch →</a>
-  <button class="hamburger" id="hamburger">&#9776;</button>
+  <div style="display:flex;align-items:center;gap:0.75rem;">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+      <!-- Moon (shown in dark mode) -->
+      <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <!-- Sun (shown in light mode) -->
+      <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a class="nav-cta" href="mailto:amal.kannan.sadagopan@gmail.com">Get in touch →</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
 </nav>
 
 
@@ -854,6 +901,17 @@
 
 
 <script>
+  // ── Theme toggle ──
+  const html        = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  // Restore saved preference
+  if (localStorage.getItem('theme') === 'light') html.setAttribute('data-theme', 'light');
+  themeToggle.addEventListener('click', () => {
+    const isLight = html.getAttribute('data-theme') === 'light';
+    html.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+  });
+
   // Mobile nav
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
