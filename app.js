@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────
-//  app.js  —  Rendering engine. No need to edit
-//  this file for content changes — use data.js.
+//  app.js  -  Rendering engine. No need to edit
+//  this file for content changes - use data.js.
 // ─────────────────────────────────────────────
 
 import { profile, stats, sideCards, projects, publications, skills } from './data.js';
@@ -365,7 +365,7 @@ function renderProjects() {
         <span class="section-rule"></span>
       </div>
       <h2 class="section-title">Projects</h2>
-      <p class="section-sub">Each project represents a distinct methodological world — from wet-lab genotyping to network pharmacology to cell biology.</p>
+      <p class="section-sub">Each project represents a distinct methodological world - from wet-lab genotyping to network pharmacology to cell biology.</p>
       <div class="projects">
         ${projects.map(p => `
           <div class="project-card fade">
@@ -447,7 +447,7 @@ function renderContact() {
         <span class="section-rule"></span>
       </div>
       <h2 class="section-title">Let's connect</h2>
-      <p class="section-sub">I'm actively exploring direct PhD programmes in molecular and clinical genomics. If you're working on something at the intersection of genomics, diagnostics, or precision medicine — I'd love to talk.</p>
+      <p class="section-sub">I'm actively exploring direct PhD programmes in molecular and clinical genomics. If you're working on something at the intersection of genomics, diagnostics, or precision medicine - I'd love to talk.</p>
       <div class="contact-grid">
         ${items.map(i => i.href
           ? `<a class="contact-item" href="${i.href}"${i.target ? ` target="${i.target}" rel="noopener"` : ''}>${i.icon}<div><span class="contact-label">${i.label}</span><span class="contact-val">${i.val}</span></div></a>`

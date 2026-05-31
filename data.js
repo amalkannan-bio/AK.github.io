@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-//  data.js  —  ALL portfolio content lives here.
+//  data.js  -  ALL portfolio content lives here.
 //  Edit this file to update anything on the site.
 // ─────────────────────────────────────────────
 
@@ -13,7 +13,7 @@ export const profile = {
   avatar:    "./amal-portrait.jpeg",
   labPhoto:  "./amal-lab.jpg.jpeg",
 
-  tagline: `I study the genome — how genetic variation shapes disease risk,
+  tagline: `I study the genome - how genetic variation shapes disease risk,
     and how we can exploit biological networks to find better treatments.
     Currently pursuing a <strong>direct PhD</strong> in molecular and clinical
     genomics, with a long-term focus on <strong>precision diagnostics</strong>.`,
@@ -22,17 +22,17 @@ export const profile = {
     `I'm a Biomedical Sciences graduate from <strong>Sri Ramachandra Institute
     of Higher Education and Research (SRIHER)</strong>, Chennai. My research sits
     at the junction of <strong>molecular genetics, epidemiology, and computational
-    biology</strong> — I want to understand how sequence-level variation translates
+    biology</strong> - I want to understand how sequence-level variation translates
     into phenotypic disease, and how we can intervene early.`,
 
     `My thesis work involves designing and executing a <strong>case-control genetic
     association study</strong> in autism spectrum disorder, running statistical models
     from raw genotyping data all the way to odds ratios and gene-environment
     interactions. In parallel, I've spent time in <strong>in-silico drug
-    discovery</strong> — identifying hub genes in lung cancer and docking
+    discovery</strong> - identifying hub genes in lung cancer and docking
     phytocompounds as potential inhibitors.`,
 
-    `Outside the lab, I've led large teams — as a <strong>Petty Officer Cadet</strong>
+    `Outside the lab, I've led large teams - as a <strong>Petty Officer Cadet</strong>
     in the Navy Wing of the NCC and as <strong>Cultural Secretary</strong> managing a
     ₹10.2L budget across 300+ students. I believe good science and good leadership
     aren't that different.`,
@@ -45,7 +45,7 @@ export const profile = {
 
 export const stats = [
   { num: "8.66", label: "CGPA · B.Sc (Hons)\nBiomedical Sciences" },
-  { num: "#1",   label: "of 289 proposals — Chancellor's Fellowship" },
+  { num: "#1",   label: "of 289 proposals - Chancellor's Fellowship" },
   { num: "3",    label: "Research projects across genetics, genomics & drug discovery" },
   { num: "2",    label: "Manuscripts in preparation · 2026" },
 ];
@@ -80,8 +80,8 @@ export const projects = [
     imgBg:  "#0d1520",
     status: "Manuscript in prep",
     desc: `Designed and executed a <strong>case-control genetic association study</strong>
-      (n = 200; 100 ASD cases, 100 sex-matched controls) investigating two XRCC1 SNPs —
-      rs25487 (Arg399Gln) and rs1799782 (Arg194Trp) — in autism susceptibility.
+      (n = 200; 100 ASD cases, 100 sex-matched controls) investigating two XRCC1 SNPs -
+      rs25487 (Arg399Gln) and rs1799782 (Arg194Trp) - in autism susceptibility.
       Performed PCR-RFLP genotyping, confirmed Hardy-Weinberg equilibrium, and evaluated
       association under five inheritance models.`,
     finding: `Key finding: <em>rs25487 T allele showed a significant inverse association with ASD</em>
@@ -112,13 +112,13 @@ export const projects = [
     type:   "cell",
     label:  "Cell & Molecular Biology",
     period: "May 2024",
-    title:  "IDH Expression in HEK293 Cells — CSIR-IICT",
+    title:  "IDH Expression in HEK293 Cells - CSIR-IICT",
     inst:   "Applied Biology Lab, CSIR-IICT, Hyderabad",
     image:  "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1000&q=80&fit=crop",
     imgBg:  "#1a150d",
     status: "Completed",
     desc: `Cultured HEK293 cells and performed <strong>transfection</strong> to assess IDH expression
-      via western blotting. Worked across molecular cloning workflows in an applied cell biology setting —
+      via western blotting. Worked across molecular cloning workflows in an applied cell biology setting -
       first intensive exposure to bench science in a national research institute.`,
     finding: null,
     tags: ["Cell Culture","Transfection","Western Blotting","Molecular Cloning"],
@@ -137,14 +137,14 @@ export const publications = [
     icon:   "🧬",
     status: "in-prep",
     label:  "Manuscript in Preparation · 2026",
-    title:  "XRCC1 Gene Polymorphisms and Autism Spectrum Disorder Risk — A Case-Control Study (n = 200)",
+    title:  "XRCC1 Gene Polymorphisms and Autism Spectrum Disorder Risk - A Case-Control Study (n = 200)",
     venue:  "Target submission 2026 · Department of Human Genetics, SRIHER",
   },
   {
     icon:   "💊",
     status: "in-prep",
     label:  "Manuscript in Preparation · 2026",
-    title:  "In-Silico Identification of Phytocompound Candidates Targeting Hub-Genes in Lung Cancer — Network Pharmacology and Molecular Docking Study",
+    title:  "In-Silico Identification of Phytocompound Candidates Targeting Hub-Genes in Lung Cancer - Network Pharmacology and Molecular Docking Study",
     venue:  "Target submission 2026 · Department of Biomedical Sciences, SRIHER",
   },
 ];
