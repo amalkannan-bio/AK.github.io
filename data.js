@@ -15,8 +15,7 @@ export const profile = {
 
   tagline: `I study the genome - how genetic variation shapes disease risk,
     and how we can exploit biological networks to find better treatments.
-    Currently pursuing a <strong>direct PhD</strong> in molecular and clinical
-    genomics, with a long-term focus on <strong>precision diagnostics</strong>.`,
+    Currently looking for a <strong>direct PhD</strong> in molecular and cancer biology, with a long-term focus on <strong>precision diagnostics</strong>.`,
 
   about: [
     `I'm a Biomedical Sciences graduate from <strong>Sri Ramachandra Institute
